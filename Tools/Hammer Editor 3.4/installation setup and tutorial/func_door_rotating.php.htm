@@ -1,0 +1,178 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+<title>func_door_rotating - Counter-Strike Mapping - SuperJer.com</title>
+<meta name="description" content="This page teaches you how to make a simple rotating door in a Counter-Strike map.">
+<meta name="keywords" content="door, rotate, func_door_rotating, counter-strike, counter strike, mapping, maps, how to, tutorial, make maps, hammer, worldcraft, build maps, cstrike, csmap" lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<link rel="stylesheet" type="text/css" href="func_door_rotating.php_files/base.css">
+<link rel="stylesheet" type="text/css" href="func_door_rotating.php_files/light.css" title="a">
+<link rel="alternate stylesheet" type="text/css" href="func_door_rotating.php_files/dark.css" title="b">
+<script type="text/javascript" src="func_door_rotating.php_files/styleswitcher.js"></script>
+</head><body>
+<div style="height: 297px; background: url(&quot;/_/superjer-logo-large-on-gray.png&quot;) no-repeat scroll center top rgb(128, 128, 128);">
+<div id="hurrr" class="t_hon" style="margin: 0pt auto; width: 800px;">
+ <div style="width: 380px; margin: 0pt auto auto; padding: 20px 0pt 0pt;"><a class="clr" href=""><img src="func_door_rotating.php_files/_.gif" width="380" height="250"></a></div>
+</div>
+</div>
+<div class="t_inv">
+ <table id="hurrs" style="margin: 0pt auto; width: 800px;" border="0" cellpadding="0" cellspacing="0"><tbody><tr>
+  <td align="left" width="14.3%"><a class="navar" href="news.php">news</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="videos.php">videos</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="maps.php">cs&nbsp;maps</a></td>
+  <td align="left" width="14.3%"><a class="nasel" href="articles.php">articles</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="soft.php">software</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="music.php">music</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="forum/">forum</a></td>
+ </tr></tbody></table>
+</div>
+<div class="t_wcon">
+<div id="hurrt" class="t_con" style="margin: 0pt auto; width: 800px;">
+ <div style="width: 150px; float: right; white-space: nowrap; text-align: right;">
+  <a class="mycss" href="javascript:%20void(0);" onclick="setActiveStyleSheet('a');return false;">LIGHT</a> | <a class="mycss" href="javascript:%20void(0);" onclick="setActiveStyleSheet('b');return false;">DARK</a>
+ </div>
+<table style="clear: right; float: right; margin-top: 30px; margin-left: 70px; margin-bottom: 40px;" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td><b>ADVANCED STUFF</b></td></tr>
+<tr><td><a href="learn_adv.php">Advanced Stuff Home</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><a href="learn/func_ladder.php">func_ladder</a></td></tr>
+<tr><td><a href="learn/func_door_rotating.php">func_door_rotating</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><a href="learnA.php">Back to Basic Appendix</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="lil">
+Problems or questions?<br>Visit the <a href="forum/">Forum</a> for help!
+</td></tr>
+</tbody></table>
+<!-- START OF SECTION -->
+<h1 class="h_green">func_door_rotating<span class="nte"></span></h1>
+
+This page explains how to create a rotating door in a Counter-Strike map with Hammer. Here is the basic set up:<br>
+<br>
+<img src="func_door_rotating.php_files/func_door_rotating.gif">
+<br><br>
+First, build your door however you want it to look. Use as many brushes and textures as you like.
+<br><br>
+Then you need to place a special brush called an ORIGIN brush. It is the
+ green brush in the picture. It is used to set the 'center' of your 
+door. Your door can only rotate around its 'center'. You can set the 
+center anywhere, even outside the door.
+<br><br>
+The blue line shows what the door will rotate around: the Z Axis which 
+goes through the center of the ORIGIN brush. If you do not use an ORIGIN
+ brush, your door will rotate around the center of the map. Which is 
+bad.
+<br><br>
+Once you have your door and ORIGIN built, select all your door brushes 
+and your ORIGIN brush and press Ctrl+T to 'Tie it all to an Entity'.
+<br><br>
+There are a few properties you must set now, like how fast your door opens and how far it opens, etc.:
+<br>
+<table style="margin-left: 20px;" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td valign="top" width="140"><b>Speed</b></td><td>The default is usually ok but you might want to make a fast or slow door.</td></tr>
+<tr><td valign="top"><b>Distance (deg)</b></td><td>How far your door opens, 90 degrees by default. Usually this is correct.</td></tr>
+</tbody></table>
+<br>
+Also take a look at the flags:
+<br>
+<table style="margin-left: 20px;" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td valign="top" width="140"><b>Reverse Dir</b></td><td>Makes the door open in the other direction. Same as using -90 instead of 90 for the distance (but safer?)</td></tr>
+<tr><td valign="top"><b>Passable</b></td><td>Makes the door non-solid, so you can't be blocked by it.</td></tr>
+<tr><td valign="top"><b>One Way</b></td><td>Makes the door only open one direction. Otherwise you can push the door open from either side.</td></tr>
+<tr><td valign="top"><b>Toggle</b></td><td>The door will not close by itself, you will have to use it again to close it. Probably more realistic.</td></tr>
+<tr><td valign="top"><b>X Axis</b></td><td>Makes the door rotate around the X Axis. Good for a trap door with the hinge on the North/South edge.</td></tr>
+<tr><td valign="top"><b>Y Axis</b></td><td>Makes the door rotate around the Y Axis. Good for a trap door with the hinge on the East/West edge.</td></tr>
+</tbody></table>
+<br><br>
+
+<!-- END OF SECTION -->
+</div>
+</div>
+<div id="hurru" style="margin: 20px auto 100px; width: 800px;">
+<div class="cop" style="float: left;">Copyright © 2000-2009 SuperJer.com. All rights reserved.</div>
+<div class="cop" style="float: right;"><a href="about.php">About</a>&nbsp;&nbsp;&nbsp;<a href="privacy.php">Privacy Policy</a>&nbsp;&nbsp;&nbsp;<a href="directory.php">Directory</a></div>
+</div>
+<script type="text/javascript">
+if (top.location != self.location)
+top.location = self.location;
+function mobiFriendly() {
+  if( typeof dimthelights == 'function' )
+    setTimeout( "dimthelights()", 2000 );
+  var w = 0;
+  if( document.documentElement && document.documentElement.clientWidth ) {
+    //IE 6+ in 'standards compliant mode'
+    w = document.documentElement.clientWidth;
+  } else if( document.body && ( document.body.clientWidth ) ) {
+    //IE 4 compatible
+    w = document.body.clientWidth;
+  } else if( typeof( window.innerWidth ) == 'number' ) {
+    //Non-IE
+    w = window.innerWidth;
+  }
+  iw='150px'; ih='100px'; fs='16px';
+  if(w>=800 || w<200) {
+    w='800px';
+  } else {
+    iw='120px'; ih='80px';
+    if(w<450) {
+      iw='75px'; ih='50px'; fs='10px';
+    }
+    w=''+(w-30)+'px';
+  }
+  changeCss('a.nasel:link','font-size',fs);
+  changeCss('a.navar:link','font-size',fs);
+  changeCss('a.nasel:visited','font-size',fs);
+  changeCss('a.navar:visited','font-size',fs);
+  changeCss('a.nasel:active','font-size',fs);
+  changeCss('a.navar:active','font-size',fs);
+  changeCss('a.nasel:hover','font-size',fs);
+  changeCss('a.navar:hover','font-size',fs);
+  document.getElementById('hurrr').style.width=w;
+  document.getElementById('hurrs').style.width=w;
+  document.getElementById('hurrt').style.width=w;
+  document.getElementById('hurru').style.width=w;
+  /*
+  document.getElementById('duhhr').style.width=iw;
+  document.getElementById('duhhr').style.height=ih;
+  document.getElementById('duhhs').style.width=iw;
+  document.getElementById('duhhs').style.height=ih;
+  document.getElementById('duhht').style.width=iw;
+  document.getElementById('duhht').style.height=ih;
+  */
+}
+window.onresize = mobiFriendly;
+window.onload = mobiFriendly;
+function changeCss(theClass,element,value) {
+ //http://www.shawnolson.net/a/503/altering-css-class-attributes-with-javascript.html
+ var cssRules;
+ if (document.all) {
+  cssRules = 'rules';
+ }
+ else if (document.getElementById) {
+  cssRules = 'cssRules';
+ }
+ var added = false;
+ for(var S = 0; S < document.styleSheets.length; S++) {
+  for(var R = 0; R < document.styleSheets[S][cssRules].length; R++) {
+   if(document.styleSheets[S][cssRules][R].selectorText == theClass) {
+    if(document.styleSheets[S][cssRules][R].style[element]) {
+     document.styleSheets[S][cssRules][R].style[element] = value;
+     added=true;
+     break;
+    }
+   }
+  }
+  if(!added) {
+   if(document.styleSheets[S].insertRule) {
+    document.styleSheets[S].insertRule(theClass+' { '+element+': '+value+'; }',document.styleSheets[S][cssRules].length);
+   } else if (document.styleSheets[S].addRule) {
+    document.styleSheets[S].addRule(theClass,element+': '+value+';');
+   }
+  }
+ }
+}
+</script>
+</body></html>

@@ -1,0 +1,87 @@
+body {margin:0px;background:#FFF;}
+body,td {color:#000;font:16px arial,sans-serif;line-height:22px;text-align:justify;}
+
+img {border:0}
+
+h1 {font:26px arial,sans-serif;color:#000;display:block;font-weight:bold;margin-top:20px;margin-bottom:3px;}
+h2 {font:24px arial,sans-serif;color:#000;display:inline;font-weight:bold;margin-top:0px;margin-bottom:0px;}
+
+form {display:inline;}
+input {font-weight:bold;}
+.gbb {background-color:#6699cc;margin:0px;padding:2px;border-width:2px;border-style:outset;border-color:#6699cc;border-spacing:0;}
+.gbb td, .gbb tr {background-color: #6699cc;}
+
+a:link,
+a:visited,
+a:active       {color:#0000CC;text-decoration:underline;padding:2px;}
+a:hover        {color:#CC0000;text-decoration:underline;padding:2px;}
+a.clr:link,
+a.clr:visited,
+a.clr:active   {padding:0px;color:#000;text-decoration:none;}
+a.clr:hover    {padding:0px;color:#000;text-decoration:none;background:none;}
+
+a.navar:link,
+a.navar:visited {color:#000;font:16px arial,sans-serif;text-decoration:none;font-weight:bold;display:block;
+                 background:#FFF;border:1px solid #000;margin-left:0px;
+                 padding-left:4px;padding-top:4px;padding-bottom:5px;position:relative;top:0px;z-index:1;}
+a.navar:hover   {color:#C00;font:16px arial,sans-serif;text-decoration:none;font-weight:bold;display:block;
+                 background:#FFFFFF;border:1px solid #000;margin-left:0px;
+                 padding-left:4px;padding-top:4px;padding-bottom:5px;position:relative;top:-2px;z-index:1;}
+a.navar:active  {color:#F00;font:16px arial,sans-serif;text-decoration:none;font-weight:bold;display:block;
+                 background:#EEE;border:1px solid #000;margin-left:0px;margin-top:2px;
+                 padding-left:4px;padding-top:4px;padding-bottom:3px;position:relative;top:0px;z-index:1;}
+
+a.nasel:link,
+a.nasel:visited,
+a.nasel:hover   {color:#000;font:16px arial,sans-serif;text-decoration:none;font-weight:bold;display:block;
+                 background:#EEE;border:1px solid #000;margin-left:0px;margin-top:2px;
+                 padding-left:4px;padding-top:4px;padding-bottom:3px;position:relative;top:0px;z-index:1;}
+a.nasel:active  {color:#F00;font:16px arial,sans-serif;text-decoration:none;font-weight:bold;display:block;
+                 background:#EEE;border:1px solid #000;margin-left:0px;margin-top:2px;
+                 padding-left:4px;padding-top:4px;padding-bottom:3px;position:relative;top:0px;z-index:1;}
+
+a.mycss:link,
+a.mycss:visited,
+a.mycss:active {font-size:12px;}
+a.mycss:hover  {font-size:12px;}
+
+.t_bak {background:#FFFFFF;}
+.t_inv {background:#000000;}
+.t_con {}
+
+.logowhite {width:470;height:41;margin-top:0px;margin-bottom:0px;margin-right:10px;display:block;}
+.logoblack {width:470;height:41;margin-top:0px;margin-bottom:0px;margin-right:10px;display:none;}
+.logodim   {width:470;height:41;margin-top:0px;margin-bottom:0px;margin-right:10px;display:none;}
+
+.luguwhite {width:291;height:31;margin-top:0px;margin-bottom:0px;margin-right:0px;display:block;}
+.lugublack {width:291;height:31;margin-top:0px;margin-bottom:0px;margin-right:0px;display:none;}
+
+.fut {font-size:14px;margin-left:84px;font-weight:bold;text-align:left;}
+
+.lil {font-size:12px;}
+.lilr {font-size:10px;}
+.nte {font-size:10px;margin-left:10px;color:#888;font-weight:normal;}
+.cop {font-size:12px;padding-top:6px;padding-bottom:8px;padding-left:4px;color:#888;}
+.par {position:relative;top:0px;left:0px;z-index:1;}
+.npic {margin-top:27px;margin-left:10px;}
+.vim {margin-right:20px;margin-bottom:20px;}
+.olg {margin-top:0px;}
+.scd {font:24px arial,sans-serif;color:#FF0000;font-weight:bold;}
+
+.let {color:#F8F8F8;font:80px arial,sans-serif;font-weight:bold;position:relative;top:45px;left:0px;max-height:1px;max-width:1px;line-height:1px;display:block;overflow:visible;z-index:0;}
+.h_red {color:#D00;}
+.h_blue {color:#04A;}
+.h_cyan {color:#088;}
+.h_orange {color:#F80;}
+.h_yellow {color:#EC0;}
+.h_green {color:#490;}
+
+/* NEW! */
+.itemicon {margin:0;float:left;width:150px;height:118px;border:0;}
+.itemtext {margin:0 0 0 170px;}
+.clearer {clear:both;height:1px;line-height:1px;}
+.txt {}
+div.tablet {text-align:center;background:#DDD;padding:20px;margin:0 0 20px 0;-moz-border-radius:20px;-webkit-border-radius:20px;border-radius:20px;}
+div#hurru {border-top:1px dashed #AAA;}
+.tex {margin:10px 0 20px 0;padding:10px;border:0;background-color:#E8E8E8;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;}
+

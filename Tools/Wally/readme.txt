@@ -1,0 +1,1 @@
+This tool is necessary to modify or create new .PAK files for HLDC

@@ -1,0 +1,1 @@
+This is a collection of tools by dc-swat.ru for converting to and from .pvr texture format

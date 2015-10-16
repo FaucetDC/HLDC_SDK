@@ -1,0 +1,174 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+<title>Learn to make Counter-Strike Maps (3 - Brushes) - SuperJer.com</title>
+<meta name="description" content="This page teaches you how brushes are the basic building blocks for all the solid stuff in you Counter-Strike map.">
+<meta name="keywords" content="counter-strike, counter strike, mapping, maps, how to, tutorial, make maps, hammer, worldcraft, build maps, cstrike, csmap" lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<link rel="stylesheet" type="text/css" href="learn3.php_files/base.css">
+<link rel="stylesheet" type="text/css" href="learn3.php_files/light.css" title="a">
+<link rel="alternate stylesheet" type="text/css" href="learn3.php_files/dark.css" title="b">
+<script type="text/javascript" src="learn3.php_files/styleswitcher.js"></script>
+</head><body>
+<div style="height: 297px; background: url(&quot;/_/superjer-logo-large-on-gray.png&quot;) no-repeat scroll center top rgb(128, 128, 128);">
+<div id="hurrr" class="t_hon" style="margin: 0pt auto; width: 800px;">
+ <div style="width: 380px; margin: 0pt auto auto; padding: 20px 0pt 0pt;"><a class="clr" href=""><img src="learn3.php_files/_.gif" width="380" height="250"></a></div>
+</div>
+</div>
+<div class="t_inv">
+ <table id="hurrs" style="margin: 0pt auto; width: 800px;" border="0" cellpadding="0" cellspacing="0"><tbody><tr>
+  <td align="left" width="14.3%"><a class="navar" href="news.php">news</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="videos.php">videos</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="maps.php">cs&nbsp;maps</a></td>
+  <td align="left" width="14.3%"><a class="nasel" href="articles.php">articles</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="soft.php">software</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="music.php">music</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="forum/">forum</a></td>
+ </tr></tbody></table>
+</div>
+<div class="t_wcon">
+<div id="hurrt" class="t_con" style="margin: 0pt auto; width: 800px;">
+ <div style="width: 150px; float: right; white-space: nowrap; text-align: right;">
+  <a class="mycss" href="javascript:%20void(0);" onclick="setActiveStyleSheet('a');return false;">LIGHT</a> | <a class="mycss" href="javascript:%20void(0);" onclick="setActiveStyleSheet('b');return false;">DARK</a>
+ </div>
+<table style="clear: right; float: right; margin-top: 30px; margin-left: 80px; margin-bottom: 40px;" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td><b>INDEX</b></td></tr>
+<tr><td><a href="learn.php">1.&nbsp;Install</a></td></tr>
+<tr><td><a href="learn2.php">2.&nbsp;Configure</a></td></tr>
+<tr><td><a href="learn3.php">3.&nbsp;Brushes</a></td></tr>
+<tr><td><a href="learn4.php.htm">4.&nbsp;Cameras</a></td></tr>
+<tr><td><a href="learn5.php">5.&nbsp;Leak&nbsp;Protection</a></td></tr>
+<tr><td><a href="learn6.php">6.&nbsp;Entities</a></td></tr>
+<tr><td><a href="learn7.php">7.&nbsp;Compile&nbsp;&amp;&nbsp;Play!</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><a href="learnA.php">Appendix</a></td></tr>
+<tr><td><a href="learn_adv.php">Advanced Stuff</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="lil">
+Problems or questions?<br>Visit the <a href="forum/">Forum</a> for help!
+</td></tr>
+</tbody></table>
+<!-- START OF SECTION -->
+<h1 class="h_green">Get Learned! Step 3 - Buildin' Blocks<span class="nte">BRUSHES</span></h1>
+
+You should have Hammer open, so now select <b>File-&gt;New</b> from the menu bar. You should now see 4 big black rectangles, or <i>viewports</i>, labelled camera, top, front and side. To the right, you should see a panel that looks like this:<br><br>
+<img src="learn3.php_files/learn02.gif"><br><br>
+That panel shows what texture is currently selected. A <i>texture</i> is a picture that is plastered onto a wall, floor, ceiling, or <i>surface</i>
+ in a 3d game. You've probably seen them before. You can choose a new 
+texture by clicking the Browse button. It will display a list of all the
+ textures you have loaded right now. (Remember opening the file 
+'cstrike.wad'? That's where these textures came from.)
+<br><br>
+Once you have selected a texture that makes your heart filled with gladness, click the button on the left that looks like this:<br><br>
+<img src="learn3.php_files/learn03.gif" onclick="exp4();"><br><br>
+This is the <b>brush creation tool</b>. A <i>brush</i> is a 3d chunk of 
+space defined by a few surfaces. For example, a cube is defined by 6 
+surfaces or planes. Move your mouse pointer over the viewport labelled 
+'top'. It should look like a plus with a fuzzy rectangle. Now <b>click and drag</b>
+ on the grid in the top viewport to draw a rectangle. When you let go of
+ the drag, the rectangle should turn white and 8 little white <i>handles</i> should appear around it. You can use the handles to resize your rectangle.<br><br>
+KEY POINT: Look at the other viewpoints. Your rectangle is actually a 3d
+ box! Isn't that rad? What you need to get used to is looking at a 3d 
+object from different 2d views. If you can master that, you'll be able 
+to create just about anything you like!<br><br>
+Now notice that you can resize your box in all 3 viewports. This may not
+ seem important now, but when you are building a complex shape later, 
+this is super-duper useful. Also try <b>clicking inside your box and dragging it</b>. This is how you move it around.
+<br><br>
+Now hit <b>Enter</b> on your keyboard. Your box should have turned blue or green, meaning it <i>actually exists</i> now. Before it was just a plan. You can <b>click on your box</b>, or brush, like I said earlier, and it will turn red. In Hammer, when something is red, that means it is <i>selected</i>. You can resize and move selected brushes just like you did before.
+<br><br>
+Now glue on your wings because it's time to get to the next page, Sally!
+<br><br>
+<a style="float: right;" href="learn4.php.htm"> Next page &gt;&gt;</a><a href="learn2.php">&lt;&lt; Previous page</a>
+
+<!-- END OF SECTION -->
+</div>
+</div>
+<div id="hurru" style="margin: 20px auto 100px; width: 800px;">
+<div class="cop" style="float: left;">Copyright © 2000-2009 SuperJer.com. All rights reserved.</div>
+<div class="cop" style="float: right;"><a href="about.php">About</a>&nbsp;&nbsp;&nbsp;<a href="privacy.php">Privacy Policy</a>&nbsp;&nbsp;&nbsp;<a href="directory.php">Directory</a></div>
+</div>
+<script type="text/javascript">
+if (top.location != self.location)
+top.location = self.location;
+function mobiFriendly() {
+  if( typeof dimthelights == 'function' )
+    setTimeout( "dimthelights()", 2000 );
+  var w = 0;
+  if( document.documentElement && document.documentElement.clientWidth ) {
+    //IE 6+ in 'standards compliant mode'
+    w = document.documentElement.clientWidth;
+  } else if( document.body && ( document.body.clientWidth ) ) {
+    //IE 4 compatible
+    w = document.body.clientWidth;
+  } else if( typeof( window.innerWidth ) == 'number' ) {
+    //Non-IE
+    w = window.innerWidth;
+  }
+  iw='150px'; ih='100px'; fs='16px';
+  if(w>=800 || w<200) {
+    w='800px';
+  } else {
+    iw='120px'; ih='80px';
+    if(w<450) {
+      iw='75px'; ih='50px'; fs='10px';
+    }
+    w=''+(w-30)+'px';
+  }
+  changeCss('a.nasel:link','font-size',fs);
+  changeCss('a.navar:link','font-size',fs);
+  changeCss('a.nasel:visited','font-size',fs);
+  changeCss('a.navar:visited','font-size',fs);
+  changeCss('a.nasel:active','font-size',fs);
+  changeCss('a.navar:active','font-size',fs);
+  changeCss('a.nasel:hover','font-size',fs);
+  changeCss('a.navar:hover','font-size',fs);
+  document.getElementById('hurrr').style.width=w;
+  document.getElementById('hurrs').style.width=w;
+  document.getElementById('hurrt').style.width=w;
+  document.getElementById('hurru').style.width=w;
+  /*
+  document.getElementById('duhhr').style.width=iw;
+  document.getElementById('duhhr').style.height=ih;
+  document.getElementById('duhhs').style.width=iw;
+  document.getElementById('duhhs').style.height=ih;
+  document.getElementById('duhht').style.width=iw;
+  document.getElementById('duhht').style.height=ih;
+  */
+}
+window.onresize = mobiFriendly;
+window.onload = mobiFriendly;
+function changeCss(theClass,element,value) {
+ //http://www.shawnolson.net/a/503/altering-css-class-attributes-with-javascript.html
+ var cssRules;
+ if (document.all) {
+  cssRules = 'rules';
+ }
+ else if (document.getElementById) {
+  cssRules = 'cssRules';
+ }
+ var added = false;
+ for(var S = 0; S < document.styleSheets.length; S++) {
+  for(var R = 0; R < document.styleSheets[S][cssRules].length; R++) {
+   if(document.styleSheets[S][cssRules][R].selectorText == theClass) {
+    if(document.styleSheets[S][cssRules][R].style[element]) {
+     document.styleSheets[S][cssRules][R].style[element] = value;
+     added=true;
+     break;
+    }
+   }
+  }
+  if(!added) {
+   if(document.styleSheets[S].insertRule) {
+    document.styleSheets[S].insertRule(theClass+' { '+element+': '+value+'; }',document.styleSheets[S][cssRules].length);
+   } else if (document.styleSheets[S].addRule) {
+    document.styleSheets[S].addRule(theClass,element+': '+value+';');
+   }
+  }
+ }
+}
+</script>
+</body></html>

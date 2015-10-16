@@ -1,0 +1,59 @@
+body {background:#000000;}
+body,td {color:#FFF;}
+
+h1 {color:#FFF;}
+h2 {color:#FFF}
+
+a:link,
+a:visited,
+a:active       {color:#00EEEE;}
+a:hover        {color:#000000;background:#00EEEE;}
+a.clr:link,
+a.clr:visited,
+a.clr:active   {color:#FFF;}
+a.clr:hover    {color:#FFF;}
+
+a.navar:link,
+a.navar:visited {color:#FFF;background:#181818;border:1px solid #181818;}
+a.navar:hover   {color:#F00;background:#FFF;border:1px solid #181818;}
+a.navar:active  {color:#FFF;background:#C00;border:1px solid #181818;}
+
+a.nasel:link,
+a.nasel:visited {color:#CCC;background:#000;border:1px solid #181818;border-bottom:1px solid #000;}
+a.nasel:hover   {color:#F00;background:#FFF;border:1px solid #181818;}
+a.nasel:active  {color:#FFF;background:#C00;border:1px solid #181818;}
+
+a.nocss:link,
+a.nocss:visited,
+a.nocss:active {font-size:12px;color:#888;text-decoration:line-through;}
+a.nocss:hover  {font-size:12px;color:#888;background:#000;text-decoration:line-through;}
+
+.t_bak {}
+.t_inv {background:#181818;}
+.t_con {}
+.t_hon {}
+.t_freecon {background:#000000;}
+
+.logowhite {display:none;}
+.logoblack {display:block;}
+.logodim   {display:none;}
+
+.luguwhite {display:none;}
+.lugublack {display:block;}
+
+.cop {color:#555;}
+.scd {color:#FF0000;}
+.gra {color:#FF0000;}
+
+.let {color:#181818;}
+.h_red {color:#F00;}
+.h_blue {color:#08F;}
+.h_cyan {color:#0CC;}
+.h_orange {color:#FA0;}
+.h_yellow {color:#FF0;}
+.h_green {color:#6C0;}
+
+div.tablet {background:#333;}
+div#hurru {border-top:1px dashed #555;}
+.tex {background-color:#222;}
+

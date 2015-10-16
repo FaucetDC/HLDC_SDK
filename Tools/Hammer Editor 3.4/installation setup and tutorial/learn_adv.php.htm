@@ -1,0 +1,173 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+<title>Learn to make Counter-Strike Maps (Advanced) - SuperJer.com</title>
+<meta name="description" content="This page teaches you how to make a ladder CORRECTLY in a Counter-Strike map.">
+<meta name="keywords" content="counter-strike, counter strike, mapping, maps, how to, tutorial, make maps, hammer, worldcraft, build maps, cstrike, csmap" lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<link rel="stylesheet" type="text/css" href="learn_adv.php_files/base.css">
+<link rel="stylesheet" type="text/css" href="learn_adv.php_files/light.css" title="a">
+<link rel="alternate stylesheet" type="text/css" href="learn_adv.php_files/dark.css" title="b">
+<script type="text/javascript" src="learn_adv.php_files/styleswitcher.js"></script>
+</head><body>
+<div style="height: 297px; background: url(&quot;/_/superjer-logo-large-on-gray.png&quot;) no-repeat scroll center top rgb(128, 128, 128);">
+<div id="hurrr" class="t_hon" style="margin: 0pt auto; width: 800px;">
+ <div style="width: 380px; margin: 0pt auto auto; padding: 20px 0pt 0pt;"><a class="clr" href=""><img src="learn_adv.php_files/_.gif" width="380" height="250"></a></div>
+</div>
+</div>
+<div class="t_inv">
+ <table id="hurrs" style="margin: 0pt auto; width: 800px;" border="0" cellpadding="0" cellspacing="0"><tbody><tr>
+  <td align="left" width="14.3%"><a class="navar" href="news.php">news</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="videos.php">videos</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="maps.php">cs&nbsp;maps</a></td>
+  <td align="left" width="14.3%"><a class="nasel" href="articles.php">articles</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="soft.php">software</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="music.php">music</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="forum/">forum</a></td>
+ </tr></tbody></table>
+</div>
+<div class="t_wcon">
+<div id="hurrt" class="t_con" style="margin: 0pt auto; width: 800px;">
+ <div style="width: 150px; float: right; white-space: nowrap; text-align: right;">
+  <a class="mycss" href="javascript:%20void(0);" onclick="setActiveStyleSheet('a');return false;">LIGHT</a> | <a class="mycss" href="javascript:%20void(0);" onclick="setActiveStyleSheet('b');return false;">DARK</a>
+ </div>
+<table style="clear: right; float: right; margin-top: 30px; margin-left: 70px; margin-bottom: 40px;" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td><b>ADVANCED STUFF</b></td></tr>
+<tr><td><a href="learn_adv.php">Advanced Stuff Home</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><a href="learn/func_ladder.php">func_ladder</a></td></tr>
+<tr><td><a href="learn/func_door_rotating.php">func_door_rotating</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><a href="learnA.php">Back to Basic Appendix</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="lil">
+Problems or questions?<br>Visit the <a href="forum/">Forum</a> for help!
+</td></tr>
+</tbody></table>
+<!-- START OF SECTION -->
+<h1 class="h_green">Get Learned! Advanced Stuff<span class="nte"></span></h1>
+
+This section explains how to make entity-based objects in 
+Half-Life/Counter-Strike, such as ladders, doors, water, and triggers. 
+Right now we just have ladders and rotating doors. More will be added 
+later.
+<br><br>
+<b>Before you try advanced stuff,</b> download and install these things:<br><br>
+
+<a href="files/zhlt.wad">zhlt.wad</a><br>
+<span style="font-size: 90%;">Add this to your textures in Hammer. It 
+gives you all the 'tool textures' that let you make cool things. Make 
+sure to change your HLCSG line in your compile, like this: <span style="font-family: monospace;">hlcsg -wadinclude zhlt ...</span> or else no one will be able to play your maps. (Not needed if you use -nowadtextures.)</span><br><br>
+<a href="files/cs-fgd-xp_8u.zip">expert .fgd</a><br>
+<span style="font-size: 90%;">Gives you access to ALL the entity types 
+in CS. Unzip everything to your Hammer/fgd/counter-strike folder and 
+tell Hammer to use the new FGD (Tools-&gt;Options-&gt;Game 
+Configurations-&gt;Game Data Files box).</span><br><br>
+<a href="http://nemesis.thewavelength.net/index.php?c=76">GCFScape</a><br>
+<span style="font-size: 90%;">Allows you to open the Steam GCF files and access cstrike.wad and other important files.</span><br><br>
+
+<br>
+Remember that in order to make a brush or brushes into an entity, select
+ all of them and press Ctrl+T. In order to open the entity properties 
+window later, select the entity and press Alt+Enter.
+
+<!-- END OF SECTION -->
+<!-- START OF SECTION -->
+<h1 class="h_green">Advanced Stuff: Lessons<span class="nte"></span></h1>
+
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td valign="top" width="200"><b><a href="learn/func_ladder.php">func_ladder</a></b></td><td>How to make a ladder that you can climb, and shoot through.</td></tr>
+<tr><td valign="top" width="200"><b><a href="learn/func_door_rotating.php">func_door_rotating</a></b></td><td>How to make a door that rotates to open and close.</td></tr>
+<!--<tr><td valign=top width=200><b><a href='/learn/func_.php'>func_</a></b></td><td></td></tr>-->
+</tbody></table>
+<!-- END OF SECTION -->
+</div>
+</div>
+<div id="hurru" style="margin: 20px auto 100px; width: 800px;">
+<div class="cop" style="float: left;">Copyright © 2000-2009 SuperJer.com. All rights reserved.</div>
+<div class="cop" style="float: right;"><a href="about.php">About</a>&nbsp;&nbsp;&nbsp;<a href="privacy.php">Privacy Policy</a>&nbsp;&nbsp;&nbsp;<a href="directory.php">Directory</a></div>
+</div>
+<script type="text/javascript">
+if (top.location != self.location)
+top.location = self.location;
+function mobiFriendly() {
+  if( typeof dimthelights == 'function' )
+    setTimeout( "dimthelights()", 2000 );
+  var w = 0;
+  if( document.documentElement && document.documentElement.clientWidth ) {
+    //IE 6+ in 'standards compliant mode'
+    w = document.documentElement.clientWidth;
+  } else if( document.body && ( document.body.clientWidth ) ) {
+    //IE 4 compatible
+    w = document.body.clientWidth;
+  } else if( typeof( window.innerWidth ) == 'number' ) {
+    //Non-IE
+    w = window.innerWidth;
+  }
+  iw='150px'; ih='100px'; fs='16px';
+  if(w>=800 || w<200) {
+    w='800px';
+  } else {
+    iw='120px'; ih='80px';
+    if(w<450) {
+      iw='75px'; ih='50px'; fs='10px';
+    }
+    w=''+(w-30)+'px';
+  }
+  changeCss('a.nasel:link','font-size',fs);
+  changeCss('a.navar:link','font-size',fs);
+  changeCss('a.nasel:visited','font-size',fs);
+  changeCss('a.navar:visited','font-size',fs);
+  changeCss('a.nasel:active','font-size',fs);
+  changeCss('a.navar:active','font-size',fs);
+  changeCss('a.nasel:hover','font-size',fs);
+  changeCss('a.navar:hover','font-size',fs);
+  document.getElementById('hurrr').style.width=w;
+  document.getElementById('hurrs').style.width=w;
+  document.getElementById('hurrt').style.width=w;
+  document.getElementById('hurru').style.width=w;
+  /*
+  document.getElementById('duhhr').style.width=iw;
+  document.getElementById('duhhr').style.height=ih;
+  document.getElementById('duhhs').style.width=iw;
+  document.getElementById('duhhs').style.height=ih;
+  document.getElementById('duhht').style.width=iw;
+  document.getElementById('duhht').style.height=ih;
+  */
+}
+window.onresize = mobiFriendly;
+window.onload = mobiFriendly;
+function changeCss(theClass,element,value) {
+ //http://www.shawnolson.net/a/503/altering-css-class-attributes-with-javascript.html
+ var cssRules;
+ if (document.all) {
+  cssRules = 'rules';
+ }
+ else if (document.getElementById) {
+  cssRules = 'cssRules';
+ }
+ var added = false;
+ for(var S = 0; S < document.styleSheets.length; S++) {
+  for(var R = 0; R < document.styleSheets[S][cssRules].length; R++) {
+   if(document.styleSheets[S][cssRules][R].selectorText == theClass) {
+    if(document.styleSheets[S][cssRules][R].style[element]) {
+     document.styleSheets[S][cssRules][R].style[element] = value;
+     added=true;
+     break;
+    }
+   }
+  }
+  if(!added) {
+   if(document.styleSheets[S].insertRule) {
+    document.styleSheets[S].insertRule(theClass+' { '+element+': '+value+'; }',document.styleSheets[S][cssRules].length);
+   } else if (document.styleSheets[S].addRule) {
+    document.styleSheets[S].addRule(theClass,element+': '+value+';');
+   }
+  }
+ }
+}
+</script>
+</body></html>

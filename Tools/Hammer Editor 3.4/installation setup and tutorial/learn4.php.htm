@@ -1,0 +1,183 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+<title>Learn to make Counter-Strike Maps (4 - Cameras) - SuperJer.com</title>
+<meta name="description" content="This page teaches you how to use the camers in Hammer to view your Counter-Strike map as you build it.">
+<meta name="keywords" content="counter-strike, counter strike, mapping, maps, how to, tutorial, make maps, hammer, worldcraft, build maps, cstrike, csmap" lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<link rel="stylesheet" type="text/css" href="learn4.php_files/base.css">
+<link rel="stylesheet" type="text/css" href="learn4.php_files/light.css" title="a">
+<link rel="alternate stylesheet" type="text/css" href="learn4.php_files/dark.css" title="b">
+<script type="text/javascript" src="learn4.php_files/styleswitcher.js"></script>
+</head><body>
+<div style="height: 297px; background: url(&quot;/_/superjer-logo-large-on-gray.png&quot;) no-repeat scroll center top rgb(128, 128, 128);">
+<div id="hurrr" class="t_hon" style="margin: 0pt auto; width: 800px;">
+ <div style="width: 380px; margin: 0pt auto auto; padding: 20px 0pt 0pt;"><a class="clr" href=""><img src="learn4.php_files/_.gif" width="380" height="250"></a></div>
+</div>
+</div>
+<div class="t_inv">
+ <table id="hurrs" style="margin: 0pt auto; width: 800px;" border="0" cellpadding="0" cellspacing="0"><tbody><tr>
+  <td align="left" width="14.3%"><a class="navar" href="news.php">news</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="videos.php">videos</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="maps.php">cs&nbsp;maps</a></td>
+  <td align="left" width="14.3%"><a class="nasel" href="articles.php">articles</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="soft.php">software</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="music.php">music</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="forum/">forum</a></td>
+ </tr></tbody></table>
+</div>
+<div class="t_wcon">
+<div id="hurrt" class="t_con" style="margin: 0pt auto; width: 800px;">
+ <div style="width: 150px; float: right; white-space: nowrap; text-align: right;">
+  <a class="mycss" href="javascript:%20void(0);" onclick="setActiveStyleSheet('a');return false;">LIGHT</a> | <a class="mycss" href="javascript:%20void(0);" onclick="setActiveStyleSheet('b');return false;">DARK</a>
+ </div>
+<table style="clear: right; float: right; margin-top: 30px; margin-left: 80px; margin-bottom: 40px;" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td><b>INDEX</b></td></tr>
+<tr><td><a href="learn.php">1.&nbsp;Install</a></td></tr>
+<tr><td><a href="learn2.php">2.&nbsp;Configure</a></td></tr>
+<tr><td><a href="learn3.php">3.&nbsp;Brushes</a></td></tr>
+<tr><td><a href="learn4.php">4.&nbsp;Cameras</a></td></tr>
+<tr><td><a href="learn5.php.htm">5.&nbsp;Leak&nbsp;Protection</a></td></tr>
+<tr><td><a href="learn6.php">6.&nbsp;Entities</a></td></tr>
+<tr><td><a href="learn7.php">7.&nbsp;Compile&nbsp;&amp;&nbsp;Play!</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><a href="learnA.php">Appendix</a></td></tr>
+<tr><td><a href="learn_adv.php">Advanced Stuff</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="lil">
+Problems or questions?<br>Visit the <a href="forum/">Forum</a> for help!
+</td></tr>
+</tbody></table>
+<!-- START OF SECTION -->
+<h1 class="h_green">Get Learned! Step 4 - Learn to Fly<span class="nte">CAMERAS</span></h1>
+See that big juicy red button that looks like this?<br><br>
+<img src="learn4.php_files/learn04.gif">
+<br><br>
+That's the <b>camera button</b>, and we're going to use it to look at stuff! So <b>click it</b> and enter <i>camera mode</i>. In camera mode you can't move brushes around, you can only look around. So, <b>hold shift and click and drag</b> in the top viewport from A to B as shown:<br><br>
+<img src="learn4.php_files/learn05.gif">
+<br><br>
+That's how you create a new camera. The blue circle is the eye and the 
+red line is the direction of sight. By clicking on either end you can 
+move them around. To delete a camera, just press <b>Delete</b> on your keyboard while it is selected (red).
+<br><br>
+If you created your camera correctly, you should see a 3d box in the upper left viewport like this:<br><br>
+<img src="learn4.php_files/learn06.gif">
+<br><br>
+If you don't see it, look in your top, front and side viewports to make 
+sure that the line of sight is pointing from the eye to your brush. If 
+you STILL can't see it, make sure your camera isn't too close to your 
+brush. Don't read further until you can see your brush in 3d!
+<br><br>
+If you can see your brush in 3d, go ahead and click this button:
+<br><br>
+<img src="learn4.php_files/learn12.gif">
+<br><br>
+That's the <b>selection tool</b> -- it's what you were using after you 
+created your brush, when you moved it and stretched it. You don't 
+normally need to use the <b>camera button</b> at all. I just wanted you to find your brush easily.
+<br><br>
+Now move your mouse pointer into the 3d viewport and <b>press and hold your spacebar</b>. As long as your <b>spacebar is pressed</b> you can look around with <b>left click and drag</b> in the 3d viewport. This also works in the 2d viewports!
+<br><br>
+Now, with your mouse pointer in the 3d viewport, try the <b>W, A, S,</b> and <b>D</b> keys. That's how you move the camera around.
+<br><br>
+Combining all of the above, hold spacebar, hold left click in the 3d 
+viewport, use W, A, S, and D and move your mouse. It's a lot of buttons 
+at once, but you can move around just like in [<i>FPS game</i>]!
+<br><br>
+If you get lost in the scary blackness, just create a new camera again.
+<br><br>
+Now that you can fly, let's build a room...
+<br><br>
+<a style="float: right;" href="learn5.php.htm"> Next page &gt;&gt;</a><a href="learn3.php">&lt;&lt; Previous page</a>
+
+<!-- END OF SECTION -->
+</div>
+</div>
+<div id="hurru" style="margin: 20px auto 100px; width: 800px;">
+<div class="cop" style="float: left;">Copyright © 2000-2009 SuperJer.com. All rights reserved.</div>
+<div class="cop" style="float: right;"><a href="about.php">About</a>&nbsp;&nbsp;&nbsp;<a href="privacy.php">Privacy Policy</a>&nbsp;&nbsp;&nbsp;<a href="directory.php">Directory</a></div>
+</div>
+<script type="text/javascript">
+if (top.location != self.location)
+top.location = self.location;
+function mobiFriendly() {
+  if( typeof dimthelights == 'function' )
+    setTimeout( "dimthelights()", 2000 );
+  var w = 0;
+  if( document.documentElement && document.documentElement.clientWidth ) {
+    //IE 6+ in 'standards compliant mode'
+    w = document.documentElement.clientWidth;
+  } else if( document.body && ( document.body.clientWidth ) ) {
+    //IE 4 compatible
+    w = document.body.clientWidth;
+  } else if( typeof( window.innerWidth ) == 'number' ) {
+    //Non-IE
+    w = window.innerWidth;
+  }
+  iw='150px'; ih='100px'; fs='16px';
+  if(w>=800 || w<200) {
+    w='800px';
+  } else {
+    iw='120px'; ih='80px';
+    if(w<450) {
+      iw='75px'; ih='50px'; fs='10px';
+    }
+    w=''+(w-30)+'px';
+  }
+  changeCss('a.nasel:link','font-size',fs);
+  changeCss('a.navar:link','font-size',fs);
+  changeCss('a.nasel:visited','font-size',fs);
+  changeCss('a.navar:visited','font-size',fs);
+  changeCss('a.nasel:active','font-size',fs);
+  changeCss('a.navar:active','font-size',fs);
+  changeCss('a.nasel:hover','font-size',fs);
+  changeCss('a.navar:hover','font-size',fs);
+  document.getElementById('hurrr').style.width=w;
+  document.getElementById('hurrs').style.width=w;
+  document.getElementById('hurrt').style.width=w;
+  document.getElementById('hurru').style.width=w;
+  /*
+  document.getElementById('duhhr').style.width=iw;
+  document.getElementById('duhhr').style.height=ih;
+  document.getElementById('duhhs').style.width=iw;
+  document.getElementById('duhhs').style.height=ih;
+  document.getElementById('duhht').style.width=iw;
+  document.getElementById('duhht').style.height=ih;
+  */
+}
+window.onresize = mobiFriendly;
+window.onload = mobiFriendly;
+function changeCss(theClass,element,value) {
+ //http://www.shawnolson.net/a/503/altering-css-class-attributes-with-javascript.html
+ var cssRules;
+ if (document.all) {
+  cssRules = 'rules';
+ }
+ else if (document.getElementById) {
+  cssRules = 'cssRules';
+ }
+ var added = false;
+ for(var S = 0; S < document.styleSheets.length; S++) {
+  for(var R = 0; R < document.styleSheets[S][cssRules].length; R++) {
+   if(document.styleSheets[S][cssRules][R].selectorText == theClass) {
+    if(document.styleSheets[S][cssRules][R].style[element]) {
+     document.styleSheets[S][cssRules][R].style[element] = value;
+     added=true;
+     break;
+    }
+   }
+  }
+  if(!added) {
+   if(document.styleSheets[S].insertRule) {
+    document.styleSheets[S].insertRule(theClass+' { '+element+': '+value+'; }',document.styleSheets[S][cssRules].length);
+   } else if (document.styleSheets[S].addRule) {
+    document.styleSheets[S].addRule(theClass,element+': '+value+';');
+   }
+  }
+ }
+}
+</script>
+</body></html>

@@ -1,0 +1,3 @@
+go to folder "installation setup and tutorial" , then see file "learn.php.htm"
+
+for more tutorial see: http://countermap2.com/Tutorials/index.html

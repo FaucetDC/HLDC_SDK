@@ -1,0 +1,1 @@
+Hammer Editor 3.4 is the level editor for Half-Life. It's used to create and modify playable levels for Half-Life and mods

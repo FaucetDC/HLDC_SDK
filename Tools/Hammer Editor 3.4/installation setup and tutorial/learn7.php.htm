@@ -1,0 +1,221 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+<title>Learn to make Counter-Strike Maps (7 - Compile and Play) - SuperJer.com</title>
+<meta name="description" content="Now that you've built your first map, here's how to make it game-ready and then play it!">
+<meta name="keywords" content="counter-strike, counter strike, mapping, maps, how to, tutorial, make maps, hammer, worldcraft, build maps, cstrike, csmap" lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<link rel="stylesheet" type="text/css" href="learn7.php_files/base.css">
+<link rel="stylesheet" type="text/css" href="learn7.php_files/light.css" title="a">
+<link rel="alternate stylesheet" type="text/css" href="learn7.php_files/dark.css" title="b">
+<script type="text/javascript" src="learn7.php_files/styleswitcher.js"></script>
+</head><body>
+<div style="height: 297px; background: url(&quot;/_/superjer-logo-large-on-gray.png&quot;) no-repeat scroll center top rgb(128, 128, 128);">
+<div id="hurrr" class="t_hon" style="margin: 0pt auto; width: 800px;">
+ <div style="width: 380px; margin: 0pt auto auto; padding: 20px 0pt 0pt;"><a class="clr" href=""><img src="learn7.php_files/_.gif" width="380" height="250"></a></div>
+</div>
+</div>
+<div class="t_inv">
+ <table id="hurrs" style="margin: 0pt auto; width: 800px;" border="0" cellpadding="0" cellspacing="0"><tbody><tr>
+  <td align="left" width="14.3%"><a class="navar" href="news.php">news</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="videos.php">videos</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="maps.php">cs&nbsp;maps</a></td>
+  <td align="left" width="14.3%"><a class="nasel" href="articles.php">articles</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="soft.php">software</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="music.php">music</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="forum/">forum</a></td>
+ </tr></tbody></table>
+</div>
+<div class="t_wcon">
+<div id="hurrt" class="t_con" style="margin: 0pt auto; width: 800px;">
+ <div style="width: 150px; float: right; white-space: nowrap; text-align: right;">
+  <a class="mycss" href="javascript:%20void(0);" onclick="setActiveStyleSheet('a');return false;">LIGHT</a> | <a class="mycss" href="javascript:%20void(0);" onclick="setActiveStyleSheet('b');return false;">DARK</a>
+ </div>
+<table style="clear: right; float: right; margin-top: 30px; margin-left: 80px; margin-bottom: 40px;" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td><b>INDEX</b></td></tr>
+<tr><td><a href="learn.php">1.&nbsp;Install</a></td></tr>
+<tr><td><a href="learn2.php">2.&nbsp;Configure</a></td></tr>
+<tr><td><a href="learn3.php">3.&nbsp;Brushes</a></td></tr>
+<tr><td><a href="learn4.php">4.&nbsp;Cameras</a></td></tr>
+<tr><td><a href="learn5.php">5.&nbsp;Leak&nbsp;Protection</a></td></tr>
+<tr><td><a href="learn6.php">6.&nbsp;Entities</a></td></tr>
+<tr><td><a href="learn7.php">7.&nbsp;Compile&nbsp;&amp;&nbsp;Play!</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><a href="learnA.php">Appendix</a></td></tr>
+<tr><td><a href="learn_adv.php">Advanced Stuff</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="lil">
+Problems or questions?<br>Visit the <a href="forum/">Forum</a> for help!
+</td></tr>
+</tbody></table>
+<!-- START OF SECTION -->
+<h1 class="h_green">Get Learned! Step 7 - Finish Line<span class="nte">COMPILE &amp; PLAY</span></h1>
+
+In <a href="learn.php">Step 1</a> I told you to 
+download the ZHLT Windows executables. That file should be a ZIP file so
+ go ahead and extract all the files in it to a new folder on your hard 
+drive. A good place for this is:<br><br>
+C:\zhlt\
+<br><br>
+Where C:\ is the same drive that has Counter-Strike installed. Open your new folder so you are looking at the contents:
+<br><br>
+<img src="learn7.php_files/learn18.gif">
+<br><br>
+If you do not see file extensions on your files, like the '.exe', '.txt' above, then <a href="fileext.php" target="new">click here it's very important</a>!
+<br><br>
+As shown in the picture, create a new text document by <b>right clicking</b> in the white-space and then using the pop-up menu. Name the file 'catpee.bat'.
+<br><br>
+Go back into Hammer and click <b>File-&gt;Export to .MAP</b>. Save you 
+map as 'catpee.map' in the folder where you just created 'catpee.bat'. 
+Then close Hammer and go back to the folder where 'catpee.bat' is.
+<br><br>
+Now <b>right click on 'catpee.bat' and choose Edit</b>. This should cause Notepad to open with nothing in it. Type the following stuff into the document exactly as shown:
+<br><br>
+<table cellpadding="12" cellspacing="0" width="100%"><tbody><tr><td>
+<h2>Without Steam</h2><br>
+<font face="courier">
+@echo off<br>
+hlcsg -nowadtextures catpee<br>
+hlbsp catpee<br>
+hlvis catpee<br>
+hlrad catpee<br>
+copy catpee.bsp "<font color="red">C:\half-life</font>\cstrike\maps"<br>
+cd "<font color="red">C:\half-life</font>"<br>
+pause<br>
+hl -dev -console -game cstrike +sv_cheats 1 +map catpee<br>
+</font>
+<br>
+<span class="lil"><b>"C:\half-life" may not be the correct location of 
+Half-Life on your computer. Make sure you type the correct location on 
+both the lines where it says that.</b></span>
+<br><br>
+<h2>With Steam</h2><br>
+<font face="courier">
+@echo off<br>
+hlcsg -nowadtextures catpee<br>
+hlbsp catpee<br>
+hlvis catpee<br>
+hlrad catpee<br>
+copy catpee.bsp "<font color="red">C:\Steam</font>\SteamApps\<img src="learn7.php_files/hay_guys.gif" width="17" height="17">\counter-strike\cstrike\maps"<br>
+pause<br>
+"<font color="red">C:\Steam</font>\Steam.exe" -applaunch 10 -dev +sv_cheats 1 +map catpee<br>
+</font>
+<br>
+<span class="lil"><b>"C:\Steam" may not be the correct location of Steam
+ on your computer. Make sure you type the correct location on both the 
+lines where it says that. Also replace <img src="learn7.php_files/hay_guys.gif" width="17" height="17"> with your account name. And if you do not have a "maps" folder, create one.</b></span>
+</td></tr></tbody></table>
+<br>
+When you're sure you have it right, save the file and close Notepad. 
+Then double click on the file 'catpee.bat' to run it. Lot's of confusing
+ stuff will show up in a <i>command window</i> as ZHLT compiles your map. When it is done you will see (at the bottom):
+<br><br>
+<code>
+Press any key to continue . . .
+</code>
+<br><br>
+Now do NOT press a key! First make sure nothing went wrong. Look in the 
+folder where 'catpee.bat' is and if you see a new file called 
+'catpee.err' then your map FAILED to compile. If it failed, <a href="failcompile.php" target="new">click here</a>. Otherwise you can continue.
+<br><br>
+Go back to the command window and press any key. Counter-Strike will 
+start and load your map in singleplayer mode. You will be able to use 
+cheats like <font color="red"><b>noclip</b></font> and <font color="red"><b>god</b></font> and <font color="red"><b>impulse 101</b></font> for testing. Try them! (You won't have a gun or anything until you type <b>impulse 101</b> in the console.)
+<br><br>
+That's it! You've made your first map. Ain't you one special duckling!
+<br><br>
+Read the Appendix for guidance on where to go next!
+<br><br>
+<a style="float: right;" href="learnA.php"> Next page &gt;&gt;</a><a href="learn6.php">&lt;&lt; Previous page</a>
+
+<!-- END OF SECTION -->
+</div>
+</div>
+<div id="hurru" style="margin: 20px auto 100px; width: 800px;">
+<div class="cop" style="float: left;">Copyright © 2000-2009 SuperJer.com. All rights reserved.</div>
+<div class="cop" style="float: right;"><a href="about.php">About</a>&nbsp;&nbsp;&nbsp;<a href="privacy.php">Privacy Policy</a>&nbsp;&nbsp;&nbsp;<a href="directory.php">Directory</a></div>
+</div>
+<script type="text/javascript">
+if (top.location != self.location)
+top.location = self.location;
+function mobiFriendly() {
+  if( typeof dimthelights == 'function' )
+    setTimeout( "dimthelights()", 2000 );
+  var w = 0;
+  if( document.documentElement && document.documentElement.clientWidth ) {
+    //IE 6+ in 'standards compliant mode'
+    w = document.documentElement.clientWidth;
+  } else if( document.body && ( document.body.clientWidth ) ) {
+    //IE 4 compatible
+    w = document.body.clientWidth;
+  } else if( typeof( window.innerWidth ) == 'number' ) {
+    //Non-IE
+    w = window.innerWidth;
+  }
+  iw='150px'; ih='100px'; fs='16px';
+  if(w>=800 || w<200) {
+    w='800px';
+  } else {
+    iw='120px'; ih='80px';
+    if(w<450) {
+      iw='75px'; ih='50px'; fs='10px';
+    }
+    w=''+(w-30)+'px';
+  }
+  changeCss('a.nasel:link','font-size',fs);
+  changeCss('a.navar:link','font-size',fs);
+  changeCss('a.nasel:visited','font-size',fs);
+  changeCss('a.navar:visited','font-size',fs);
+  changeCss('a.nasel:active','font-size',fs);
+  changeCss('a.navar:active','font-size',fs);
+  changeCss('a.nasel:hover','font-size',fs);
+  changeCss('a.navar:hover','font-size',fs);
+  document.getElementById('hurrr').style.width=w;
+  document.getElementById('hurrs').style.width=w;
+  document.getElementById('hurrt').style.width=w;
+  document.getElementById('hurru').style.width=w;
+  /*
+  document.getElementById('duhhr').style.width=iw;
+  document.getElementById('duhhr').style.height=ih;
+  document.getElementById('duhhs').style.width=iw;
+  document.getElementById('duhhs').style.height=ih;
+  document.getElementById('duhht').style.width=iw;
+  document.getElementById('duhht').style.height=ih;
+  */
+}
+window.onresize = mobiFriendly;
+window.onload = mobiFriendly;
+function changeCss(theClass,element,value) {
+ //http://www.shawnolson.net/a/503/altering-css-class-attributes-with-javascript.html
+ var cssRules;
+ if (document.all) {
+  cssRules = 'rules';
+ }
+ else if (document.getElementById) {
+  cssRules = 'cssRules';
+ }
+ var added = false;
+ for(var S = 0; S < document.styleSheets.length; S++) {
+  for(var R = 0; R < document.styleSheets[S][cssRules].length; R++) {
+   if(document.styleSheets[S][cssRules][R].selectorText == theClass) {
+    if(document.styleSheets[S][cssRules][R].style[element]) {
+     document.styleSheets[S][cssRules][R].style[element] = value;
+     added=true;
+     break;
+    }
+   }
+  }
+  if(!added) {
+   if(document.styleSheets[S].insertRule) {
+    document.styleSheets[S].insertRule(theClass+' { '+element+': '+value+'; }',document.styleSheets[S][cssRules].length);
+   } else if (document.styleSheets[S].addRule) {
+    document.styleSheets[S].addRule(theClass,element+': '+value+';');
+   }
+  }
+ }
+}
+</script>
+</body></html>

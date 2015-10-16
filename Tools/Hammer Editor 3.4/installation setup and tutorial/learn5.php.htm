@@ -1,0 +1,213 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+<title>Learn to make Counter-Strike Maps (5 - Leak Protection) - SuperJer.com</title>
+<meta name="description" content="This page teaches you how to make a solid, leak-free map for Counter-Strike.">
+<meta name="keywords" content="counter-strike, counter strike, mapping, maps, how to, tutorial, make maps, hammer, worldcraft, build maps, cstrike, csmap" lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<link rel="stylesheet" type="text/css" href="learn5.php_files/base.css">
+<link rel="stylesheet" type="text/css" href="learn5.php_files/light.css" title="a">
+<link rel="alternate stylesheet" type="text/css" href="learn5.php_files/dark.css" title="b">
+<script type="text/javascript" src="learn5.php_files/styleswitcher.js"></script>
+</head><body>
+<div style="height: 297px; background: url(&quot;/_/superjer-logo-large-on-gray.png&quot;) no-repeat scroll center top rgb(128, 128, 128);">
+<div id="hurrr" class="t_hon" style="margin: 0pt auto; width: 800px;">
+ <div style="width: 380px; margin: 0pt auto auto; padding: 20px 0pt 0pt;"><a class="clr" href=""><img src="learn5.php_files/_.gif" width="380" height="250"></a></div>
+</div>
+</div>
+<div class="t_inv">
+ <table id="hurrs" style="margin: 0pt auto; width: 800px;" border="0" cellpadding="0" cellspacing="0"><tbody><tr>
+  <td align="left" width="14.3%"><a class="navar" href="news.php">news</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="videos.php">videos</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="maps.php">cs&nbsp;maps</a></td>
+  <td align="left" width="14.3%"><a class="nasel" href="articles.php">articles</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="soft.php">software</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="music.php">music</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="forum/">forum</a></td>
+ </tr></tbody></table>
+</div>
+<div class="t_wcon">
+<div id="hurrt" class="t_con" style="margin: 0pt auto; width: 800px;">
+ <div style="width: 150px; float: right; white-space: nowrap; text-align: right;">
+  <a class="mycss" href="javascript:%20void(0);" onclick="setActiveStyleSheet('a');return false;">LIGHT</a> | <a class="mycss" href="javascript:%20void(0);" onclick="setActiveStyleSheet('b');return false;">DARK</a>
+ </div>
+<table style="clear: right; float: right; margin-top: 30px; margin-left: 80px; margin-bottom: 40px;" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td><b>INDEX</b></td></tr>
+<tr><td><a href="learn.php">1.&nbsp;Install</a></td></tr>
+<tr><td><a href="learn2.php">2.&nbsp;Configure</a></td></tr>
+<tr><td><a href="learn3.php">3.&nbsp;Brushes</a></td></tr>
+<tr><td><a href="learn4.php">4.&nbsp;Cameras</a></td></tr>
+<tr><td><a href="learn5.php">5.&nbsp;Leak&nbsp;Protection</a></td></tr>
+<tr><td><a href="learn6.php.htm">6.&nbsp;Entities</a></td></tr>
+<tr><td><a href="learn7.php">7.&nbsp;Compile&nbsp;&amp;&nbsp;Play!</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><a href="learnA.php">Appendix</a></td></tr>
+<tr><td><a href="learn_adv.php">Advanced Stuff</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="lil">
+Problems or questions?<br>Visit the <a href="forum/">Forum</a> for help!
+</td></tr>
+</tbody></table>
+<!-- START OF SECTION -->
+<h1 class="h_green">Get Learned! Step 5 - Plumbing<span class="nte">LEAK PROTECTION</span></h1>
+
+Before I explain what a leak is, why don't you <b>click where it says camera</b> in the 3d view and select 3D textured:
+<br><br>
+<img src="learn5.php_files/learn07.gif">
+<br><br>
+You should now see that your brush is wall-papered with that texture you
+ picked earlier. You can click any of the viewport labels to change what
+  each view is, but don't worry about that now. Back to the main 
+subject, here's the most important point of all this:<br><br>
+<i>Your job as a mapper is to build a 3d container that holds water (or beer).</i>
+<br><br>
+Stunned? Let me explain. Think of brushes as solid blocks of wood you 
+can glue together and build stuff with in real life. Now whatever you 
+build, we're going to magically fill it with precious, precious beer. 
+Then we're going to turn it upside down and shake it around A LOT. If 
+any of the beer comes out, you have a leak. LEAKS ARE BAD. The biggest 
+problem beginners have is leaks. 
+<br><br>
+Take a look at this box, maybe it's going to be a room in a Counter-Strike map:
+<br><br>
+<img src="learn5.php_files/learn08.gif">
+<br><br>
+It's got an open top, and that's not good. You know why? The beer! We're
+ going to lose the beer! All we need to do is slide a brush on top to 
+seal up the room:
+<br><br>
+<img src="learn5.php_files/learn09.gif">
+<br><br>
+Only in picture 3 is the beer going to be safe. No matter what shape map
+ you make it has to be all sealed up with NO leaks. Example:
+<br><br>
+<img src="learn5.php_files/learn10.gif">
+<br><br>
+Check it out! This complicated system of rooms and hallways is just a 
+bunch of brushes sitting in the right places. I made it by positioning 
+each one where you see it:
+<br><br>
+<img src="learn5.php_files/learn11.gif">
+<br><br>
+Now I want you to just build a single squarish room. So first, make sure you're using the <b>selection tool</b>:
+<br><br>
+<img src="learn5.php_files/learn12.gif">
+<br><br>
+Now <b>click on your brush</b> to select it (in 3d or 2d view). It 
+should turn red. Use the white handles in the 2d views to make it square
+ and flat. It's going to be your floor.
+<br><br>
+It might be helpful to know that you can use the <b>+</b> and <b>-</b> 
+keys on the FAR RIGHT EDGE of your keyboard to zoom in and out in the 2d
+ views. Just put your mouse pointer over a 2d viewport and press <b><i>keypad</i> +</b> or <b>-</b>.
+<br><br>
+Remember how you could move your brush by clicking on it (not the handles) and dragging it around? Try this: <b>hold shift, click on your brush and move it to a different spot</b>,
+ then let go. You have to be holding shift when you let go on the mouse.
+ If you do it right, you will have made a copy of your brush. Take this 
+copy, and using the white handles, resize and move it to make a wall 
+like this:
+<br><br>
+<img src="learn5.php_files/learn13.gif">
+<br><br>
+Once you have done that, keep copying the wall to make the 3 other 
+walls. Then copy the floor, and make a ceiling out of it. Be careful 
+that you don't just move the originals! You need to COPY them -- it's 
+easy to mess up.
+<br><br>
+When you're done, you should have something similar to the closed 
+beer-box above. Try to move your camera into your room and look around. 
+Then get ready for Step 6!
+<br><br>
+<a style="float: right;" href="learn6.php.htm"> Next page &gt;&gt;</a><a href="learn4.php">&lt;&lt; Previous page</a>
+
+<!-- END OF SECTION -->
+</div>
+</div>
+<div id="hurru" style="margin: 20px auto 100px; width: 800px;">
+<div class="cop" style="float: left;">Copyright © 2000-2009 SuperJer.com. All rights reserved.</div>
+<div class="cop" style="float: right;"><a href="about.php">About</a>&nbsp;&nbsp;&nbsp;<a href="privacy.php">Privacy Policy</a>&nbsp;&nbsp;&nbsp;<a href="directory.php">Directory</a></div>
+</div>
+<script type="text/javascript">
+if (top.location != self.location)
+top.location = self.location;
+function mobiFriendly() {
+  if( typeof dimthelights == 'function' )
+    setTimeout( "dimthelights()", 2000 );
+  var w = 0;
+  if( document.documentElement && document.documentElement.clientWidth ) {
+    //IE 6+ in 'standards compliant mode'
+    w = document.documentElement.clientWidth;
+  } else if( document.body && ( document.body.clientWidth ) ) {
+    //IE 4 compatible
+    w = document.body.clientWidth;
+  } else if( typeof( window.innerWidth ) == 'number' ) {
+    //Non-IE
+    w = window.innerWidth;
+  }
+  iw='150px'; ih='100px'; fs='16px';
+  if(w>=800 || w<200) {
+    w='800px';
+  } else {
+    iw='120px'; ih='80px';
+    if(w<450) {
+      iw='75px'; ih='50px'; fs='10px';
+    }
+    w=''+(w-30)+'px';
+  }
+  changeCss('a.nasel:link','font-size',fs);
+  changeCss('a.navar:link','font-size',fs);
+  changeCss('a.nasel:visited','font-size',fs);
+  changeCss('a.navar:visited','font-size',fs);
+  changeCss('a.nasel:active','font-size',fs);
+  changeCss('a.navar:active','font-size',fs);
+  changeCss('a.nasel:hover','font-size',fs);
+  changeCss('a.navar:hover','font-size',fs);
+  document.getElementById('hurrr').style.width=w;
+  document.getElementById('hurrs').style.width=w;
+  document.getElementById('hurrt').style.width=w;
+  document.getElementById('hurru').style.width=w;
+  /*
+  document.getElementById('duhhr').style.width=iw;
+  document.getElementById('duhhr').style.height=ih;
+  document.getElementById('duhhs').style.width=iw;
+  document.getElementById('duhhs').style.height=ih;
+  document.getElementById('duhht').style.width=iw;
+  document.getElementById('duhht').style.height=ih;
+  */
+}
+window.onresize = mobiFriendly;
+window.onload = mobiFriendly;
+function changeCss(theClass,element,value) {
+ //http://www.shawnolson.net/a/503/altering-css-class-attributes-with-javascript.html
+ var cssRules;
+ if (document.all) {
+  cssRules = 'rules';
+ }
+ else if (document.getElementById) {
+  cssRules = 'cssRules';
+ }
+ var added = false;
+ for(var S = 0; S < document.styleSheets.length; S++) {
+  for(var R = 0; R < document.styleSheets[S][cssRules].length; R++) {
+   if(document.styleSheets[S][cssRules][R].selectorText == theClass) {
+    if(document.styleSheets[S][cssRules][R].style[element]) {
+     document.styleSheets[S][cssRules][R].style[element] = value;
+     added=true;
+     break;
+    }
+   }
+  }
+  if(!added) {
+   if(document.styleSheets[S].insertRule) {
+    document.styleSheets[S].insertRule(theClass+' { '+element+': '+value+'; }',document.styleSheets[S][cssRules].length);
+   } else if (document.styleSheets[S].addRule) {
+    document.styleSheets[S].addRule(theClass,element+': '+value+';');
+   }
+  }
+ }
+}
+</script>
+</body></html>

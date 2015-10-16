@@ -1,0 +1,1 @@
+WinBSP is used to decompile .bps map files to edit in Hammer Editor

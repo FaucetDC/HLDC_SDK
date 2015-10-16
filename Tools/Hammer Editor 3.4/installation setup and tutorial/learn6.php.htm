@@ -1,0 +1,218 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+
+<title>Learn to make Counter-Strike Maps (6 - Entities) - SuperJer.com</title>
+<meta name="description" content="This page teached you how to use entities for placing objects and triggers in a Counter-Strike map.">
+<meta name="keywords" content="counter-strike, counter strike, mapping, maps, how to, tutorial, make maps, hammer, worldcraft, build maps, cstrike, csmap" lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<link rel="stylesheet" type="text/css" href="learn6.php_files/base.css">
+<link rel="stylesheet" type="text/css" href="learn6.php_files/light.css" title="a">
+<link rel="alternate stylesheet" type="text/css" href="learn6.php_files/dark.css" title="b">
+<script type="text/javascript" src="learn6.php_files/styleswitcher.js"></script>
+</head><body>
+<div style="height: 297px; background: url(&quot;/_/superjer-logo-large-on-gray.png&quot;) no-repeat scroll center top rgb(128, 128, 128);">
+<div id="hurrr" class="t_hon" style="margin: 0pt auto; width: 800px;">
+ <div style="width: 380px; margin: 0pt auto auto; padding: 20px 0pt 0pt;"><a class="clr" href=""><img src="learn6.php_files/_.gif" width="380" height="250"></a></div>
+</div>
+</div>
+<div class="t_inv">
+ <table id="hurrs" style="margin: 0pt auto; width: 800px;" border="0" cellpadding="0" cellspacing="0"><tbody><tr>
+  <td align="left" width="14.3%"><a class="navar" href="news.php">news</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="videos.php">videos</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="maps.php">cs&nbsp;maps</a></td>
+  <td align="left" width="14.3%"><a class="nasel" href="articles.php">articles</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="soft.php">software</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="music.php">music</a></td>
+  <td align="left" width="14.3%"><a class="navar" href="forum/">forum</a></td>
+ </tr></tbody></table>
+</div>
+<div class="t_wcon">
+<div id="hurrt" class="t_con" style="margin: 0pt auto; width: 800px;">
+ <div style="width: 150px; float: right; white-space: nowrap; text-align: right;">
+  <a class="mycss" href="javascript:%20void(0);" onclick="setActiveStyleSheet('a');return false;">LIGHT</a> | <a class="mycss" href="javascript:%20void(0);" onclick="setActiveStyleSheet('b');return false;">DARK</a>
+ </div>
+<table style="clear: right; float: right; margin-top: 30px; margin-left: 80px; margin-bottom: 40px;" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td><b>INDEX</b></td></tr>
+<tr><td><a href="learn.php">1.&nbsp;Install</a></td></tr>
+<tr><td><a href="learn2.php">2.&nbsp;Configure</a></td></tr>
+<tr><td><a href="learn3.php">3.&nbsp;Brushes</a></td></tr>
+<tr><td><a href="learn4.php">4.&nbsp;Cameras</a></td></tr>
+<tr><td><a href="learn5.php">5.&nbsp;Leak&nbsp;Protection</a></td></tr>
+<tr><td><a href="learn6.php">6.&nbsp;Entities</a></td></tr>
+<tr><td><a href="learn7.php.htm">7.&nbsp;Compile&nbsp;&amp;&nbsp;Play!</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td><a href="learnA.php">Appendix</a></td></tr>
+<tr><td><a href="learn_adv.php">Advanced Stuff</a></td></tr>
+<tr><td>&nbsp;</td></tr>
+<tr><td class="lil">
+Problems or questions?<br>Visit the <a href="forum/">Forum</a> for help!
+</td></tr>
+</tbody></table>
+<!-- START OF SECTION -->
+<h1 class="h_green">Get Learned! Step 6 - Sprinkles<span class="nte">ENTITIES</span></h1>
+
+Before we sprinkle some entities onto your map, let me show you one more thing about textures. <b>Click the Browse button</b>
+ in the upper right by the little picture of the texture you picked 
+earlier. Select a different looking texture. Then (in selection mode, 
+not camera mode), <b>click on your floor brush</b>. Once it's turned red, click this button:
+<br><br>
+<img src="learn6.php_files/learn14.gif">
+<br><br>
+As you hopefully noticed, this button applies the current texture to the
+ selected brush(es). By the way, you can select more than one brush by 
+holding <b>Ctrl</b> while clicking on brushes. Also, if you click in a 
+2d view, but not on a brush, and drag, you can make a selection box. 
+When you hit <b>enter</b>, any brushes inside the box will turn red (selected). You should try this out a bit.
+<br><br>
+Back to business: we need to create a start point or two. Preferably one
+ for CT and one for T. This is going to be pretty easy so just click the
+ ugly light bulb of justice:
+<br><br>
+<img src="learn6.php_files/learn15.gif">
+<br><br>
+This is the <b>entity creation tool</b>. Now, if you look to the right, you should see a panel like this:
+<br><br>
+<img src="learn6.php_files/learn16.gif">
+<br><br>
+In the listbox titled Objects, or where it says 'ambient_generic' in the
+ picture, choose 'info_player_start'. info_player_start is the CT start 
+point entity. An <i>entity</i> is an object you can place in your map 
+that has some special meaning to the game. Wherever you place 
+info_player_start's is where each CT will start at the beginning of a 
+round of Counter-Strike.
+<br><br>
+Now move your mouse pointer over the top 2d viewport. Your pointer should look like a creepy plus with an axe. <b>Click</b>
+ inside your room and this will make a little green square with lines 
+sticking out of it -- a locator. Make sure the locator is inside your 
+room in ALL THREE 2D VIEWS. Then hit <b>Enter</b> on your keyboard. Now 
+you should have a tall green box -- about the size of a 
+Counter-Terrorist. As long as it is completely inside the room, you are 
+ok. You can move it around with the selection tool (red arrow). Make 
+sure it is not touching the floor or walls or ceiling because then the 
+player will be stuck! It's ok if it's floating in the air. It's not ok 
+if it's outside the room in <i>invalid space</i> because that is another way to get a LEAK error.
+<br><br>
+Now create another entity, but this time make an info_player_deathmatch.
+ This is the Terrorist start point entity. In a real map you'd want 16 
+or so of each kind, but for this map 1 each is ok.
+<br><br>
+Now for the last addition to your map: a light source. It's another 
+entity so choose 'light' from the Objects listbox. Put this inside your 
+room as well, maybe near the ceiling. A light entity is just an 
+invisible dot that radiates a little sunshine. You won't see a light 
+fixture or anything inside the game -- you'd have to build that out of 
+brushes.
+<br><br>
+Your light should look like a little pink box, and you know what we do 
+to little pink boxes, right? We click on them! And they turn red! Once 
+you have done this, press <b>Alt-Enter</b>. Alt-Enter is keyboard speak 
+for "show me the properties!" This works all over the place, not just 
+Hammer. Try clicking on a file in windows and pressing Alt-Enter.
+<br><br>
+Anyway, you should see this now:
+<br><br>
+<img src="learn6.php_files/learn17.gif">
+<br><br>
+Notice the list of attributes. All entities have some attributes and 
+some entities have lots. Click on Brightness. The value should be 255 
+255 128 200. The first three numbers are the color (yellow in this case)
+ and the fourth number is the brightness. Leave the brightness alone but
+ use the Pick color button to pick some god-awful color for your light 
+to shine. When your're done, close the Object Properties window and save
+ your map with <b>File-&gt;Save</b>.
+<br><br>
+Name your map 'catpee' and don't close Hammer, just minimize it. Then continue:
+<br><br>
+<a style="float: right;" href="learn7.php.htm"> Next page &gt;&gt;</a><a href="learn5.php">&lt;&lt; Previous page</a>
+
+<!-- END OF SECTION -->
+</div>
+</div>
+<div id="hurru" style="margin: 20px auto 100px; width: 800px;">
+<div class="cop" style="float: left;">Copyright © 2000-2009 SuperJer.com. All rights reserved.</div>
+<div class="cop" style="float: right;"><a href="about.php">About</a>&nbsp;&nbsp;&nbsp;<a href="privacy.php">Privacy Policy</a>&nbsp;&nbsp;&nbsp;<a href="directory.php">Directory</a></div>
+</div>
+<script type="text/javascript">
+if (top.location != self.location)
+top.location = self.location;
+function mobiFriendly() {
+  if( typeof dimthelights == 'function' )
+    setTimeout( "dimthelights()", 2000 );
+  var w = 0;
+  if( document.documentElement && document.documentElement.clientWidth ) {
+    //IE 6+ in 'standards compliant mode'
+    w = document.documentElement.clientWidth;
+  } else if( document.body && ( document.body.clientWidth ) ) {
+    //IE 4 compatible
+    w = document.body.clientWidth;
+  } else if( typeof( window.innerWidth ) == 'number' ) {
+    //Non-IE
+    w = window.innerWidth;
+  }
+  iw='150px'; ih='100px'; fs='16px';
+  if(w>=800 || w<200) {
+    w='800px';
+  } else {
+    iw='120px'; ih='80px';
+    if(w<450) {
+      iw='75px'; ih='50px'; fs='10px';
+    }
+    w=''+(w-30)+'px';
+  }
+  changeCss('a.nasel:link','font-size',fs);
+  changeCss('a.navar:link','font-size',fs);
+  changeCss('a.nasel:visited','font-size',fs);
+  changeCss('a.navar:visited','font-size',fs);
+  changeCss('a.nasel:active','font-size',fs);
+  changeCss('a.navar:active','font-size',fs);
+  changeCss('a.nasel:hover','font-size',fs);
+  changeCss('a.navar:hover','font-size',fs);
+  document.getElementById('hurrr').style.width=w;
+  document.getElementById('hurrs').style.width=w;
+  document.getElementById('hurrt').style.width=w;
+  document.getElementById('hurru').style.width=w;
+  /*
+  document.getElementById('duhhr').style.width=iw;
+  document.getElementById('duhhr').style.height=ih;
+  document.getElementById('duhhs').style.width=iw;
+  document.getElementById('duhhs').style.height=ih;
+  document.getElementById('duhht').style.width=iw;
+  document.getElementById('duhht').style.height=ih;
+  */
+}
+window.onresize = mobiFriendly;
+window.onload = mobiFriendly;
+function changeCss(theClass,element,value) {
+ //http://www.shawnolson.net/a/503/altering-css-class-attributes-with-javascript.html
+ var cssRules;
+ if (document.all) {
+  cssRules = 'rules';
+ }
+ else if (document.getElementById) {
+  cssRules = 'cssRules';
+ }
+ var added = false;
+ for(var S = 0; S < document.styleSheets.length; S++) {
+  for(var R = 0; R < document.styleSheets[S][cssRules].length; R++) {
+   if(document.styleSheets[S][cssRules][R].selectorText == theClass) {
+    if(document.styleSheets[S][cssRules][R].style[element]) {
+     document.styleSheets[S][cssRules][R].style[element] = value;
+     added=true;
+     break;
+    }
+   }
+  }
+  if(!added) {
+   if(document.styleSheets[S].insertRule) {
+    document.styleSheets[S].insertRule(theClass+' { '+element+': '+value+'; }',document.styleSheets[S][cssRules].length);
+   } else if (document.styleSheets[S].addRule) {
+    document.styleSheets[S].addRule(theClass,element+': '+value+';');
+   }
+  }
+ }
+}
+</script>
+</body></html>
