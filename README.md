@@ -3,6 +3,8 @@ A project to port source and gather development tools for compilation and modifi
 
 
 ----------------------------------------------------------------
+Version 0.5
+Added SH4 compilation ready sources
 
 Version 0.1
 This version is the stock, unported HLSDK. With various tools for HLDC
