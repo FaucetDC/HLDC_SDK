@@ -1,0 +1,1 @@
+This is the 'loose' texture files that weren't in a .WAD converted to PVR format
